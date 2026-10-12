@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10130f">
+<title>Kaun Hai Accha Dost By ~GamerFireMc</title>
+<style>
+:root{--bg:#0b0f0d;--panel:#141b17;--panel2:#1b261f;--green:#7dff72;--lime:#c4ff78;--red:#ff5757;--gold:#ffc857;--text:#f3f7f1;--muted:#aab8ac;--line:#2d3b31}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at top,#1a2b1c 0,#0b0f0d 55%);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;min-height:100vh}
+button,input,textarea,select{font:inherit}button{cursor:pointer}.wrap{width:min(980px,100%);margin:auto;padding:18px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 0 18px}.brand{font-weight:900;letter-spacing:.3px}.brand span{color:var(--green)}.pill{border:1px solid var(--line);background:#101711;color:var(--muted);padding:7px 10px;border-radius:999px;font-size:.8rem}
+.hero{position:relative;overflow:hidden;border:1px solid #39503b;border-radius:24px;padding:clamp(22px,5vw,48px);background:linear-gradient(135deg,#17261b,#121915 65%,#251b10);box-shadow:0 16px 50px #0006}
+.hero:after{content:"";position:absolute;right:-28px;top:-35px;width:160px;height:160px;background:linear-gradient(135deg,#8bff70,#246a37);opacity:.13;transform:rotate(24deg);border:14px solid #b5ff8d;box-shadow:0 0 0 14px #65bd6333}
+.kicker{color:var(--green);font-weight:800;text-transform:uppercase;font-size:.78rem;letter-spacing:2px}.hero h1{font-size:clamp(2rem,6vw,4rem);line-height:1.02;margin:12px 0}.hero p{max-width:650px;color:#c6d2c6;line-height:1.65}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}.btn{border:1px solid var(--line);background:var(--panel2);color:var(--text);border-radius:12px;padding:12px 16px;font-weight:800;transition:transform .16s,border-color .16s}.btn:hover{transform:translateY(-2px);border-color:var(--green)}.btn.primary{background:var(--green);color:#0b160c;border-color:var(--green)}.btn.danger{border-color:#693333;color:#ffaaaa}.btn.small{padding:8px 11px;font-size:.88rem}.btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.pixel{font-size:1.4rem;display:inline-block;animation:bob 2.4s ease-in-out infinite}@keyframes bob{50%{transform:translateY(-7px) rotate(3deg)}}@keyframes pop{from{opacity:0;transform:translateY(10px) scale(.98)}to{opacity:1;transform:none}}.animate{animation:pop .35s ease both}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:18px 0}.card{background:linear-gradient(145deg,#17201a,#111713);border:1px solid var(--line);border-radius:18px;padding:18px}.card h2,.card h3{margin:0 0 8px}.card p{color:var(--muted);line-height:1.55;margin:6px 0}.stat{font-size:1.6rem;font-weight:900;color:var(--lime)}.section{margin:26px 0}.section-title{display:flex;justify-content:space-between;align-items:end;gap:12px;margin-bottom:12px}.section-title h2{margin:0;font-size:1.35rem}.muted{color:var(--muted)}.hidden{display:none!important}.field{display:grid;gap:6px;margin:12px 0}.field label{font-weight:750;font-size:.9rem}.field input,.field textarea,.field select{width:100%;border:1px solid #34453a;background:#0d130f;color:var(--text);padding:12px;border-radius:11px;outline:none}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--green)}.field textarea{min-height:85px;resize:vertical}
+.mode-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.mode{border:1px solid var(--line);border-radius:16px;background:#131a15;padding:16px;text-align:left;color:var(--text)}.mode strong{display:block;font-size:1.05rem;margin:5px 0}.mode .emoji{font-size:1.8rem}.mode:hover{border-color:var(--green);background:#19241b}
+.progress{height:8px;background:#29342b;border-radius:99px;overflow:hidden;margin:14px 0 20px}.progress div{height:100%;width:0;background:linear-gradient(90deg,var(--green),#d8ff6b);transition:width .25s}
+.qhead{display:flex;justify-content:space-between;gap:10px;color:var(--muted);font-size:.9rem}.question{font-size:clamp(1.25rem,3.5vw,1.7rem);margin:18px 0}.answers{display:grid;gap:10px}.answer{padding:14px;text-align:left;background:#111812;border:1px solid #334337;border-radius:12px;color:var(--text)}.answer:hover{border-color:var(--green)}.answer.selected{border-color:var(--green);background:#1b3320;box-shadow:inset 0 0 0 1px var(--green)}.answer .letter{display:inline-grid;place-items:center;width:28px;height:28px;margin-right:9px;border-radius:8px;background:#27372a;color:var(--lime);font-weight:900}
+.result-score{font-size:clamp(3rem,12vw,5.5rem);font-weight:1000;line-height:1;color:var(--green)}.result-score small{font-size:1rem;color:var(--muted)}.result-banner{border:1px solid #426b3f;background:linear-gradient(135deg,#172e1c,#111912);border-radius:18px;padding:22px}.result-banner h2{font-size:1.6rem;margin:8px 0}.result-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.list{display:grid;gap:9px}.rank{display:flex;align-items:center;gap:12px;background:#101711;border:1px solid var(--line);border-radius:12px;padding:12px}.rank-num{font-size:1.1rem;font-weight:900;color:var(--gold);min-width:30px}.rank-main{flex:1;min-width:0}.rank-main strong{display:block;overflow-wrap:anywhere}.rank-main small{color:var(--muted)}.rank-score{font-weight:900;color:var(--lime)}
+.note{border-left:3px solid var(--gold);padding:10px 12px;background:#221e13;color:#ddd2b2;border-radius:0 10px 10px 0;font-size:.88rem;line-height:1.5}
+footer{text-align:center;color:#78877b;padding:24px 0 12px;font-size:.82rem}.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#eaffdf;color:#122014;font-weight:800;padding:12px 16px;border-radius:12px;box-shadow:0 8px 30px #0007;z-index:10;max-width:90vw;text-align:center}
+@media(max-width:640px){.wrap{padding:12px}.top{align-items:flex-start}.grid,.mode-grid{grid-template-columns:1fr}.hero{border-radius:18px}.hero:after{width:100px;height:100px}.section-title{align-items:flex-start;flex-direction:column}.card{padding:15px}.pill{font-size:.72rem}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand"><span>▰</span> GamerFireMc <span>FRIEND LAB</span></div>
+    <div class="pill">⛏️ Minecraft × 🏏 Cricket</div>
+  </header>
+
+  <main>
+    <section id="home" class="hero animate">
+      <div class="kicker">Friendship challenge unlocked</div>
+      <h1>Kaun Hai<br><span style="color:var(--green)">Accha Dost?</span></h1>
+      <p>By ~GamerFireMc · Apne doston ko challenge kar! Dekh kaun tujhe sach mein jaanta hai aur kaun bas lobby mein saath khelta hai. 🧱🏏</p>
+      <div class="actions">
+        <button class="btn primary" id="startKnow">🧠 Mujhe Kitna Jaante Ho?</button>
+        <button class="btn" id="startFriend">🕵️ Friend Challenge</button>
+      </div>
+      <div class="actions"><span class="pill">⚡ Score system</span><span class="pill">🏆 Local leaderboard</span><span class="pill">🔗 Share result</span></div>
+    </section>
+
+    <section class="grid">
+      <div class="card"><div class="pixel">⛏️</div><h3>Build Your Bond</h3><p>Har sahi jawab ek friendship XP hai. Noob se Legendary Friend tak rank banao.</p></div>
+      <div class="card"><div class="pixel">🏏</div><h3>Cricket Brain</h3><p>Custom questions mein apne favourite player, team aur gaming habits add kar.</p></div>
+    </section>
+
+    <section id="quizPanel" class="section card hidden">
+      <div class="section-title"><div><div class="kicker" id="quizKicker">Friend challenge</div><h2 id="quizTitle">Challenge shuru!</h2></div><button class="btn small" id="quitQuiz">✕ Exit</button></div>
+      <div class="field"><label for="playerName">Tera naam / nickname</label><input id="playerName" maxlength="30" placeholder="Jaise: SteveOP" autocomplete="nickname"></div>
+      <div id="ownerField" class="field hidden"><label for="ownerName">Kiske baare mein quiz hai?</label><input id="ownerName" maxlength="30" placeholder="Jaise: GamerFireMc"></div>
+      <div id="customIntro" class="muted">Har sawal ka ek jawab select kar. Best of luck, champion!</div>
+      <div class="progress"><div id="progressFill"></div></div>
+      <div id="questionArea"></div>
+      <div class="actions"><button class="btn" id="prevQ">← Back</button><button class="btn primary" id="nextQ">Next →</button></div>
+    </section>
+
+    <section id="resultPanel" class="section hidden"></section>
+
+    <section id="leaderboard" class="section card">
+      <div class="section-title"><div><div class="kicker">Hall of fame</div><h2>🏆 Local Leaderboard</h2></div><button class="btn small" id="clearBoard">Clear board</button></div>
+      <p class="muted">Is device/browser par save hue scores. Online global leaderboard ke liye backend chahiye.</p>
+      <div id="boardList" class="list"><p class="muted">Abhi koi score nahi. Pehla champion tu ban! 😎</p></div>
+    </section>
+
+    <section id="custom" class="section card">
+      <div class="section-title"><div><div class="kicker">Make it personal</div><h2>🛠️ Custom Questions</h2></div></div>
+      <p>Apne baare mein sawal aur options likh. Ye isi browser mein save honge aur “Mujhe Kitna Jaante Ho?” quiz mein use honge.</p>
+      <div class="field"><label for="newQuestion">Question</label><input id="newQuestion" maxlength="160" placeholder="Mera favourite cricket player kaun hai?"></div>
+      <div class="field"><label for="newOptions">4 options (har line par ek)</label><textarea id="newOptions" maxlength="500" placeholder="Virat Kohli&#10;Rohit Sharma&#10;MS Dhoni&#10;Jasprit Bumrah"></textarea></div>
+      <div class="field"><label for="correctOption">Correct answer ka option number (1–4)</label><select id="correctOption"><option value="0">1</option><option value="1">2</option><option value="2">3</option><option value="3">4</option></select></div>
+      <div class="actions"><button class="btn primary" id="addQuestion">＋ Add question</button><button class="btn" id="resetQuestions">Restore defaults</button></div>
+      <div id="customList" class="list" style="margin-top:14px"></div>
+    </section>
+    <div class="note">Privacy note: scores aur custom questions is browser ke local storage mein save hote hain. Ye page kisi server ko data nahi bhejta. Share result button text share karta hai; is demo mein shareable quiz links aur global leaderboard included nahi hain.</div>
+  </main>
+  <footer>Made for friendship, gaming & cricket · ~GamerFireMc 🔥</footer>
+</div>
+<div id="toast" class="toast hidden" role="status"></div>
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const STORE = {questions:'gfm_custom_questions_v1',board:'gfm_friend_board_v1',sound:'gfm_sound_v1'};
+  const defaultQuestions = [
+    {q:'Mera favourite game vibe kya hai?',opts:['Minecraft PvP','Bedwars','Survival mode','Skywars'],correct:0},
+    {q:'Minecraft mein sabse useful cheez kaunsi?',opts:['Wooden hoe','Crafting table','Dirt ka crown','Empty bucket'],correct:1},
+    {q:'Cricket mein ek over mein kitni legal balls hoti hain?',opts:['4','5','6','8'],correct:2},
+    {q:'Team ke liye best dost kya karega?',opts:['Loot chura le','Clutch mein help kare','AFK ho jaaye','Blame kare'],correct:1},
+    {q:'Match ke last moment par tu kya karega?',opts:['Give up','Team ko motivate','Game uninstall','Ping ko blame'],correct:1},
+    {q:'Ek accha dost kaisa hota hai?',opts:['Sirf kaam par yaad kare','Respect aur support de','Har baat leak kare','Har waqt roast kare'],correct:1},
+    {q:'Cricket mein batter ka main goal kya hai?',opts:['Runs banana','Stumps paint karna','Toss pakadna','Umpire ko replace karna'],correct:0},
+    {q:'Minecraft mein diamonds kahan milte hain?',opts:['Sirf clouds mein','Underground ore ke roop mein','Villager ke baal mein','Menu ke peeche'],correct:1}
+  ];
+  const friendQuestions = [
+    {q:'Agar tera dost clutch mein ho, tu kya karega?',opts:['Cover dega','Usko distract karega','Disconnect','Chat mein “ez” likhega'],correct:0},
+    {q:'Team haar rahi ho toh best response?',opts:['Sabko blame','Saath milkar try','Rage quit','Keyboard ko dosh'],correct:1},
+    {q:'Dosti ka sabse important rule?',opts:['Trust aur respect','Secrets leak','Har baat competition','Sirf jeetne par saath'],correct:0},
+    {q:'Tera dost apni achievement share kare toh?',opts:['Khushi se congratulate','Ignore','Uska mazaak uda','Apni achievement ghusa de'],correct:0},
+    {q:'Cricket match mein friend ka team haar jaaye toh?',opts:['Friendly support','Usko loser bol','Spoilers bhej','Dosti cancel'],correct:0}
+  ];
+  let customQuestions = load(STORE.questions, []);
+  let board = load(STORE.board, []);
+  let mode = 'know', questions = [], answers = [], current = 0, player = '', owner = '';
+  let soundOn = load(STORE.sound, true);
+
+  function load(key, fallback){try{const v=localStorage.getItem(key);return v?JSON.parse(v):fallback}catch(e){return fallback}}
+  function save(key,val){try{localStorage.setItem(key,JSON.stringify(val))}catch(e){toast('Browser storage available nahi hai.')} }
+  function toast(msg){$('toast').textContent=msg;$('toast').classList.remove('hidden');clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('toast').classList.add('hidden'),2400)}
+  // Sound uses a small Web Audio beep only after a user action; no external audio files.
+  function play(freq=560,dur=.07){if(!soundOn)return;try{const C=window.AudioContext||window.webkitAudioContext;if(!C)return;const c=new C(),o=c.createOscillator(),g=c.createGain();o.type='square';o.frequency.value=freq;g.gain.value=.025;o.connect(g);g.connect(c.destination);o.start();g.gain.exponentialRampToValueAtTime(.001,c.currentTime+dur);o.stop(c.currentTime+dur);setTimeout(()=>c.close(),dur*1000+80)}catch(e){}}
+  function show(el){el.classList.remove('hidden');el.classList.add('animate')}
+  function hide(el){el.classList.add('hidden')}
+  function scrollToEl(el){el.scrollIntoView({behavior:'smooth',block:'start'})}
+  function start(which){
+    mode=which;questions=which==='know'?[...defaultQuestions,...customQuestions]:[...friendQuestions];answers=Array(questions.length).fill(null);current=0;player='';owner='';
+    $('playerName').value='';$('ownerName').value='';$('ownerField').classList.toggle('hidden',which!=='know');
+    $('quizTitle').textContent=which==='know'?'Mujhe Kitna Jaante Ho?':'Friend Challenge';
+    $('quizKicker').textContent=which==='know'?'Minecraft × Cricket quiz':'Friendship challenge';
+    $('customIntro').textContent=which==='know'?'Apne dost ke baare mein best guess kar. Custom questions bhi included hain.':'Teamwork, trust aur friendship instincts check kar. Ye fun quiz hai, real-life dosti ka final judgement nahi.';
+    hide($('resultPanel'));show($('quizPanel'));renderQuestion();scrollToEl($('quizPanel'));play(660);
+  }
+  function renderQuestion(){
+    const q=questions[current];$('progressFill').style.width=((current+1)/questions.length*100)+'%';
+    $('questionArea').innerHTML='<div class="qhead"><span>QUESTION '+(current+1)+' / '+questions.length+'</span><span>+'+Math.round(100/questions.length)+' XP</span></div><h3 class="question"></h3><div class="answers"></div>';
+    $('questionArea').querySelector('.question').textContent=q.q;
+    const wrap=$('questionArea').querySelector('.answers');
+    q.opts.forEach((opt,i)=>{const b=document.createElement('button');b.className='answer'+(answers[current]===i?' selected':'');b.type='button';b.innerHTML='<span class="letter">'+String.fromCharCode(65+i)+'</span>';const txt=document.createElement('span');txt.textContent=opt;b.appendChild(txt);b.addEventListener('click',()=>{answers[current]=i;renderQuestion();play(answers[current]===q.correct?760:450)});wrap.appendChild(b)});
+    $('prevQ').disabled=current===0;$('nextQ').textContent=current===questions.length-1?'See my result ✨':'Next →';
+  }
+  function next(){if(answers[current]===null){toast('Pehle ek answer select kar, champion!');play(250);return}if(current<questions.length-1){current++;renderQuestion();play()}else finish()}
+  function rankFor(p){if(p>=90)return ['Legendary Bestie','Tu toh friendship ka Ender Dragon slayer hai! 🐉'];if(p>=70)return ['Diamond Dost','Trust level: diamond armour 💎'];if(p>=45)return ['Solid Teammate','Dosti ki XP achhi hai, thoda aur khel! ⛏️'];if(p>=25)return ['Lobby Friend','Party mein hai, par map abhi explore karna hai 😂'];return ['New Spawn','Dosti ka tutorial abhi baaki hai, Steve! 🧱']}
+  function finish(){
+    player=$('playerName').value.trim()||'Anonymous Player';owner=$('ownerName').value.trim()||'your friend';
+    const correct=questions.reduce((n,q,i)=>n+(answers[i]===q.correct?1:0),0);
+    const score=Math.round(correct/questions.length*100),[rank,msg]=rankFor(score);
+    const record={player,owner:mode==='know'?owner:'Friend Challenge',mode,score,correct,total:questions.length,rank,date:new Date().toISOString()};
+    board.push(record);board.sort((a,b)=>b.score-a.score||b.correct-a.correct);board=board.slice(0,20);save(STORE.board,board);renderBoard();
+    const panel=$('resultPanel');panel.innerHTML='';
+    const banner=document.createElement('div');banner.className='result-banner animate';
+    banner.innerHTML='<div class="kicker">Challenge complete · '+(mode==='know'?'Friend knowledge':'Friendship instincts')+'</div><div class="result-score">'+score+'<small>/100</small></div><h2></h2><p class="muted"></p><p></p><div class="result-actions"><button class="btn primary" id="shareResult">🔗 Share result</button><button class="btn" id="retry">↻ Try again</button><button class="btn" id="saveText">📋 Copy result</button></div>';
+    banner.querySelector('h2').textContent=rank;banner.querySelectorAll('p')[0].textContent=msg;
+    banner.querySelectorAll('p')[1].textContent=correct+' out of '+questions.length+' correct · '+(mode==='know'?'Quiz about '+owner:'Friend Challenge')+'. Fun score hai—dosti ka asli value respect aur trust se pata chalta hai.';
+    panel.appendChild(banner);show(panel);hide($('quizPanel'));scrollToEl(panel);play(score>=70?880:420);
+    $('shareResult').onclick=()=>share(record);$('saveText').onclick=()=>copyText(resultText(record));$('retry').onclick=()=>start(mode);
+  }
+  function resultText(r){return '🔥 Kaun Hai Accha Dost? By ~GamerFireMc\\n'+r.player+' scored '+r.score+'/100!\\nRank: '+r.rank+'\\n'+r.correct+'/'+r.total+' correct.\\nMinecraft × Cricket Friend Challenge ⛏️🏏'}
+  async function copyText(t){try{await navigator.clipboard.writeText(t);toast('Result copied! Ab dost ko bhej 😎')}catch(e){fallbackCopy(t)}}
+  function fallbackCopy(t){const ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');toast('Result copied!')}catch(e){toast('Copy nahi hua—text ko manually copy kar.')}ta.remove()}
+  async function share(r){const text=resultText(r);if(navigator.share){try{await navigator.share({title:'Kaun Hai Accha Dost?',text})}catch(e){}}else copyText(text)}
+  function renderBoard(){
+    const box=$('boardList');box.innerHTML='';
+    if(!board.length){box.innerHTML='<p class="muted">Abhi koi score nahi. Pehla champion tu ban! 😎</p>';return}
+    board.forEach((r,i)=>{const row=document.createElement('div');row.className='rank';const n=document.createElement('div');n.className='rank-num';n.textContent=['🥇','🥈','🥉'][i]||('#'+(i+1));const main=document.createElement('div');main.className='rank-main';const strong=document.createElement('strong');strong.textContent=r.player;const small=document.createElement('small');small.textContent=r.rank+' · '+(r.mode==='know'?'Know Me Quiz':'Friend Challenge');main.append(strong,small);const score=document.createElement('div');score.className='rank-score';score.textContent=r.score+'/100';row.append(n,main,score);box.appendChild(row)})
+  }
+  function renderCustom(){
+    const box=$('customList');box.innerHTML='';
+    if(!customQuestions.length){box.innerHTML='<p class="muted">Abhi custom questions nahi hain.</p>';return}
+    customQuestions.forEach((q,i)=>{const row=document.createElement('div');row.className='rank';const main=document.createElement('div');main.className='rank-main';const strong=document.createElement('strong');strong.textContent=q.q;const small=document.createElement('small');small.textContent='Answer: '+q.opts[q.correct];main.append(strong,small);const del=document.createElement('button');del.className='btn small danger';del.textContent='Remove';del.onclick=()=>{customQuestions.splice(i,1);save(STORE.questions,customQuestions);renderCustom();toast('Question removed')};row.append(main,del);box.appendChild(row)})
+  }
+  $('startKnow').onclick=()=>start('know');$('startFriend').onclick=()=>start('friend');
+  $('quitQuiz').onclick=()=>{hide($('quizPanel'));scrollToEl($('home'))};$('nextQ').onclick=next;$('prevQ').onclick=()=>{if(current>0){current--;renderQuestion();play(400)}};
+  $('clearBoard').onclick=()=>{if(confirm('Is device ka leaderboard clear karna hai?')){board=[];save(STORE.board,board);renderBoard();toast('Leaderboard cleared')}};
+  $('addQuestion').onclick=()=>{const q=$('newQuestion').value.trim(),opts=$('newOptions').value.split('\n').map(x=>x.trim()).filter(Boolean),correct=Number($('correctOption').value);if(!q||opts.length!==4){toast('Question aur exactly 4 options daal.');return}customQuestions.push({q,opts,correct});save(STORE.questions,customQuestions);$('newQuestion').value='';$('newOptions').value='';renderCustom();toast('Custom question added!')};
+  $('resetQuestions').onclick=()=>{if(confirm('Saare custom questions delete karein?')){customQuestions=[];save(STORE.questions,customQuestions);renderCustom();toast('Default questions ready.')}};
+  renderBoard();renderCustom();
+})();
+</script>
+</body>
+</html>
